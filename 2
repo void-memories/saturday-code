@@ -1,0 +1,18 @@
+n=int(input('Enter the number of elements of the array:'))
+print('Input the array')
+ar=list(map(int,input().split()))
+t=int(input('Input the target sum:'))
+
+ar.sort()
+a=0
+b=n-1
+sum=ar[a]+ar[b]
+
+while sum!=t:
+    if sum<t:
+        a+=1
+    else:
+        b-=1
+    sum=ar[a]+ar[b]
+
+print([ar[a],ar[b]])
